@@ -48,7 +48,7 @@ class ParseReport:
 
     def as_dict(self) -> dict:
         return {
-            "path": self.path,
+            "file": Path(self.path).name,
             "kind": self.kind,
             "total_lines": self.total_lines,
             "parsed_records": self.parsed,

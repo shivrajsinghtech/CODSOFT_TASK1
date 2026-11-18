@@ -244,9 +244,8 @@ elif page == "📊 Model Performance":
 elif page == "📈 Dataset Insights":
     st.header("Dataset insights")
     if eda:
-        counts = pd.Series(eda["genre_counts"], name="movies").sort_values(ascending=True)
         st.subheader("Genre distribution (training set)")
-        st.bar_chart(counts, horizontal=True, height=620)
+        show_figure("genre_distribution.png", "Movies per genre in train_data.txt (sorted by frequency)")
         st.caption(
             f"Strong class imbalance: the largest genre is "
             f"{eda['imbalance_ratio_largest_to_smallest']:.0f}× the smallest. "

@@ -30,6 +30,7 @@ def main() -> None:
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    logging.getLogger("gensim").setLevel(logging.WARNING)
     reports_dir = args.reports_dir
     figures_dir = FIGURES_DIR if reports_dir == str(REPORTS_DIR) else f"{reports_dir}/figures"
     summary = run_training(

@@ -162,6 +162,9 @@ pip install -r requirements.txt
 The trained pipeline (`models/genre_classifier.joblib`, 17 MB) is included, so the app and CLI work
 right away. To retrain, extract the dataset into `data/raw/Genre Classification Dataset/`.
 
+> 🔒 **Security note:** `.joblib` model files are pickles, and loading a pickle can run code. Only load
+> model files you trained yourself or took from this repository. See [SECURITY.md](SECURITY.md).
+
 ## Usage
 
 **Web app**
@@ -199,7 +202,9 @@ CODSOFT_TASK1/
 ├── app.py                  # Streamlit application
 ├── train.py                # training / evaluation entry point
 ├── predict.py              # command-line predictions
-├── requirements.txt
+├── requirements.txt        # pinned dependency versions
+├── LICENSE                 # MIT
+├── SECURITY.md
 ├── pytest.ini
 ├── data/README.md          # where to put the raw dataset (not committed)
 ├── models/
@@ -256,4 +261,4 @@ treated as errors.
 
 ---
 
-*Built for the CodSoft Machine Learning Internship.*
+*Built for the CodSoft Machine Learning Internship.* · Licensed under the [MIT License](LICENSE).

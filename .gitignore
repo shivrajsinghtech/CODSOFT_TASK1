@@ -25,3 +25,7 @@ Thumbs.db
 
 # Ad-hoc prediction outputs
 predictions.csv
+
+# Large generated outputs – recreated by `python train.py`
+reports/test_predictions.csv
+reports/top_words_by_genre.csv
